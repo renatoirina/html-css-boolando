@@ -14,6 +14,7 @@
 
 img {
     max-width: 100%;
+    height: 550px;
     position: relative;
 }
 
@@ -23,8 +24,8 @@ img {
     background-color: aqua;
     display: flex;
     flex-wrap: wrap;
-    height: 90%;
-    width: 80%;
+    height: 90rem;
+    width: 70%;
     justify-content: center;
     margin: auto;
     margin-top: 20px;
@@ -36,14 +37,16 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: calc(100% / 3 - 20px);
-    height: 600px;
+    width: calc(100% / 3 - 50px);
+    height: 40rem;
     border: 1px solid black;
     margin: 10px;
+    padding-bottom: 40px; /* Aggiungi spazio per i testi in basso */
 }
 
 .favourites {
     position: absolute;
+    display: flex;
     background-color: white;
     height: 50px;
     width: 50px;
@@ -51,11 +54,23 @@ img {
     right: 0px;
     text-align: center;
     align-items: center;
+    justify-content: center;
     z-index: 1;
+}
+
+/* Quando passi sopra all'icona del cuore, cambia il colore */
+.favourites:hover .fa-heart {
+    color: red;
+}
+
+/* Stile predefinito per l'icona del cuore */
+.fa-heart {
+    color: black; /* Cambia il colore predefinito dell'icona del cuore */
 }
 
 .sales {
     position: absolute;
+    display: flex;
     background-color: red;
     height: 30px;
     width: 60px;
@@ -63,14 +78,15 @@ img {
     left: 0px;
     text-align: center;
     align-items: center;
+    justify-content: center;
     z-index: 1;
     color: white;
     font-weight: bold;
-    align-items: center;
 }
 
-.sustainable {
+.sustainable, .sustainable-first {
     position: absolute;
+    display: flex;
     background-color: green;
     height: 30px;
     width: 100px;
@@ -78,27 +94,25 @@ img {
     left: 65px;
     text-align: center;
     align-items: center;
+    justify-content: center;
     z-index: 1;
     color: white;
     font-weight: bold;
-    align-items: center;
 }
 .sustainable-first {
-    position: absolute;
-    background-color: green;
-    height: 30px;
-    width: 100px;
-    bottom: 25%;
     left: 0px;
-    text-align: center;
-    align-items: center;
-    z-index: 1;
-    color: white;
-    font-weight: bold;
-    align-items: center;
 }
 
+/* Inizialmente nascondi l'immagine nascosta */
+.img-container .img-hidden {
+    display: none;
+}
 
-/* .fa-solid .fa-heart {
-    color: black;
-} */
+/* Quando passi sopra all'elemento .img-container, mostra l'immagine nascosta e nascondi quella visibile */
+.img-container:hover .img-visible {;
+    display: none;
+}
+
+.img-container:hover .img-hidden {
+    display: block;
+}
