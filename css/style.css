@@ -1,15 +1,9 @@
-/* PROVA CONNESSIONE LINK */
-/* body {
-    background-color: black;
-} */
-
 /* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -18,10 +12,17 @@ img {
     position: relative;
 }
 
+h5 {
+    font: initial;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
 /* MAIN */
 .container {
     /* DEBUG */
     background-color: aqua;
+    /* /DEBUG */
     display: flex;
     flex-wrap: wrap;
     height: 90rem;
@@ -41,7 +42,7 @@ img {
     height: 40rem;
     border: 1px solid black;
     margin: 10px;
-    padding-bottom: 40px; /* Aggiungi spazio per i testi in basso */
+    padding-bottom: 40px;
 }
 
 .favourites {
@@ -58,14 +59,12 @@ img {
     z-index: 1;
 }
 
-/* Quando passi sopra all'icona del cuore, cambia il colore */
 .favourites:hover .fa-heart {
     color: red;
 }
 
-/* Stile predefinito per l'icona del cuore */
 .fa-heart {
-    color: black; /* Cambia il colore predefinito dell'icona del cuore */
+    color: black;
 }
 
 .sales {
@@ -74,7 +73,7 @@ img {
     background-color: red;
     height: 30px;
     width: 60px;
-    bottom:25%;
+    bottom: 20%;
     left: 0px;
     text-align: center;
     align-items: center;
@@ -82,6 +81,7 @@ img {
     z-index: 1;
     color: white;
     font-weight: bold;
+    border-radius: 20px;
 }
 
 .sustainable, .sustainable-first {
@@ -90,7 +90,7 @@ img {
     background-color: green;
     height: 30px;
     width: 100px;
-    bottom: 25%;
+    bottom: 20%;
     left: 65px;
     text-align: center;
     align-items: center;
@@ -98,6 +98,7 @@ img {
     z-index: 1;
     color: white;
     font-weight: bold;
+    border-radius: 20px;
 }
 .sustainable-first {
     left: 0px;
@@ -108,11 +109,24 @@ img {
     display: none;
 }
 
-/* Quando passi sopra all'elemento .img-container, mostra l'immagine nascosta e nascondi quella visibile */
-.img-container:hover .img-visible {;
+.img-container:hover .img-visible {
     display: none;
 }
 
 .img-container:hover .img-hidden {
     display: block;
+}
+
+.price, .through-price {
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.through-price {
+    text-decoration: line-through;
 }
