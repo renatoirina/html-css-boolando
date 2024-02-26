@@ -11,6 +11,7 @@
 
 img {
     max-width: 100%;
+    position: relative;
 }
 
 /* MAIN */
@@ -28,6 +29,7 @@ img {
 }
 
 .product {
+    position: relative; /* Aggiunto */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -37,3 +39,19 @@ img {
     margin: 10px;
 }
 
+.favourites {
+    position: absolute;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    top: 10px; /* Modificato */
+    right: 0px; /* Modificato */
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+/* .fa-solid .fa-heart {
+    color: black;
+} */
